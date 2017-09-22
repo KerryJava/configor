@@ -133,14 +133,16 @@ func processTags(config interface{}, prefixes ...string) error {
 		}
 
 		// Load From Shell ENV
-		for _, env := range envNames {
-			if value := os.Getenv(env); value != "" {
-				if err := yaml.Unmarshal([]byte(value), field.Addr().Interface()); err != nil {
-					return err
+		/*
+			for _, env := range envNames {
+				if value := os.Getenv(env); value != "" {
+					if err := yaml.Unmarshal([]byte(value), field.Addr().Interface()); err != nil {
+						return err
+					}
+					break
 				}
-				break
 			}
-		}
+		*/
 
 		if isBlank := reflect.DeepEqual(field.Interface(), reflect.Zero(field.Type()).Interface()); isBlank {
 			// Set default configuration if blank
