@@ -1,7 +1,7 @@
 # Configor
 
 Golang Configuration tool that support YAML, JSON, TOML, Shell Environment
-remove shell env feature in case of misuse of shell env
+# remove shell env feature in case of misuse of shell env
 
 ## Usage
 
@@ -101,7 +101,8 @@ $ go run config.go
 // Will load `config.example.yml` automatically if `config.yml` not found and print warning message
 ```
 * Shell Environment feature removed
-~* Load From Shell Environment ~
+
+~ * Load From Shell Environment ~
 
 ```go
 $ CONFIGOR_APPNAME="hello world" CONFIGOR_DB_NAME="hello world" go run config.go
