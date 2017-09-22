@@ -100,9 +100,9 @@ configor.Load(&Config, "config.yml")
 $ go run config.go
 // Will load `config.example.yml` automatically if `config.yml` not found and print warning message
 ```
-* Shell Environment feature removed
 
-~~* Load From Shell Environment ~~
+~~Load From Shell Environment~~  
+* Shell Environment feature removed
 
 ```go
 $ CONFIGOR_APPNAME="hello world" CONFIGOR_DB_NAME="hello world" go run config.go
